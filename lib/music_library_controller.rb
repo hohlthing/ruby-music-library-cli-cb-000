@@ -17,22 +17,47 @@ class MusicLibraryController
     puts "What would you like to do?"
     input = nil
     while input != 'exit'
-      input = gets
+      input = gets.strip
       case input
-      # when 'list songs'
-
+      when 'list songs'
+        list_songs
       when 'list artists'
-        @import.each { |song| puts "#{song.artist.name}" }
+        list_artists
       when 'list genres'
-        @import.each { |song| puts "#{song.genre.name}" }
-      # when 'list artist'
-      #   artist = gets
-      # when 'list genre'
-      #
-      # when 'play song'
-
+        list_genres
+      when 'list artist'
+        list_songs_by_artist
+      when 'list genre'
+        list_songs_by_genre  
+      when 'play song'
+        play_song
       end
     end
   end
 
+  def list_songs
+    
+  end
+
+  def list_artists
+    
+  end
+
+  def list_genres
+    
+  end
+
+  def list_songs_by_artist
+    
+  end
+
+  def list_songs_by_genre
+    
+  end
+
+  def play_song
+    
+  end 
+
+  
 end
