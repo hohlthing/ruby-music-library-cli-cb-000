@@ -28,7 +28,7 @@ class MusicLibraryController
       when 'list artist'
         list_songs_by_artist
       when 'list genre'
-        list_songs_by_genre  
+        list_songs_by_genre
       when 'play song'
         play_song
       end
@@ -36,28 +36,32 @@ class MusicLibraryController
   end
 
   def list_songs
-    
+    Song.all.sort { |a,b| a.name <=> b.name }.each_with_index do |song, i|
+      puts "#{i+1}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
+    end
   end
 
   def list_artists
-    
+    Artist.all.sort { |a,b| a.name <=> b.name }.each_with_index do |artist, i|
+      puts "#{i+1}. #{artist.name}"
+    end
   end
 
   def list_genres
-    
+
   end
 
   def list_songs_by_artist
-    
+
   end
 
   def list_songs_by_genre
-    
+
   end
 
   def play_song
-    
-  end 
 
-  
+  end
+
+
 end
