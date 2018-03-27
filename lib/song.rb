@@ -49,13 +49,13 @@ class Song
 
   def self.new_from_filename(filename)
     array = filename.split(" - ")
-    name = array[1]
-    artist = array[0]
-    genre = array[2]
-    song = self.new(name, artist, genre)
-    song.artist = Artist.find_or_create_by_name(artist)
-    song.artist.add_song(name)
-    song
+    song_name = array[1]
+    artist_name = array[0]
+    genre_name = array[2]
+
+    artist = Artist.find_or_create_by_name(artist_name)
+    genre = Genre.find_or_create_by_name(genre_name)
+    song = self.new(song_name, artist, genre)
   end
 
 
