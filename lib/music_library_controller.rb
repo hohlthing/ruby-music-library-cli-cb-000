@@ -17,18 +17,18 @@ class MusicLibraryController
     puts "What would you like to do?"
     input = nil
     while input != 'exit'
-      input = gets.chomp
-      when 'list songs'
+      input = gets
+      # when 'list songs'
 
-      when  'list artists'
+      when 'list artists'
         @import.each { |song| puts "#{song.artist.name}" }
       when 'list genres'
         @import.each { |song| puts "#{song.genre.name}" }
-      when 'list artist'
-
-      when 'list genre'
-
-      when 'play song'
+      # when 'list artist'
+      #   artist = gets
+      # when 'list genre'
+      #
+      # when 'play song'
 
       end
     end
