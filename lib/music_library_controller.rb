@@ -18,6 +18,7 @@ class MusicLibraryController
     input = nil
     while input != 'exit'
       input = gets
+      case input
       # when 'list songs'
 
       when 'list artists'
@@ -33,4 +34,5 @@ class MusicLibraryController
       end
     end
   end
+
 end
