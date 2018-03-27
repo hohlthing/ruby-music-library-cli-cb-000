@@ -15,5 +15,22 @@ class MusicLibraryController
     puts "To play a song, enter 'play song'."
     puts "To quit, type 'exit'."
     puts "What would you like to do?"
+    input = nil
+    while input != 'exit'
+      input = gets.chomp
+      when 'list songs'
+
+      when  'list artists'
+        @import.each { |song| puts "#{song.artist.name}" }
+      when 'list genres'
+        @import.each { |song| puts "#{song.genre.name}" }
+      when 'list artist'
+
+      when 'list genre'
+
+      when 'play song'
+
+      end
+    end
   end
 end
