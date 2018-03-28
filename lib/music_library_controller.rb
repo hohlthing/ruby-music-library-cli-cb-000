@@ -76,7 +76,7 @@ class MusicLibraryController
     if input.between?(1,song_count)
       song = Song.all.sort[input - 1]
     end
-    puts "Playing #{song.name} by #{song.artist.name}" if song != nil
+    puts "Playing #{song.name} by #{song.artist.name}" if song
   end
 
 
