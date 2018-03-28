@@ -36,7 +36,7 @@ class MusicLibraryController
   end
 
   def list_songs
-    Song.all.sort.each_with_index do |song, i|
+    Song.all.sort { |a,b| a.name <=> b.name }.each_with_index do |song, i|
       puts "#{i+1}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
     end
   end
@@ -74,7 +74,7 @@ class MusicLibraryController
     input = gets.to_i
     song_count = Song.all.length
     if input.between?(1,song_count)
-      song = Song.all.sort[input - 1]
+      song = Song.all.sort { |a,b| a.name <=> b.name } [input - 1]
     end
     puts "Playing #{song.name} by #{song.artist.name}" if song != nil
   end
