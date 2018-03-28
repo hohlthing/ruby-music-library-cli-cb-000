@@ -72,7 +72,7 @@ class MusicLibraryController
   def play_song
     puts "Which song number would you like to play?"
     input = gets.chomp.to_i
-    song = Song.sorted[input - 1] if input.between?(1,Song.length)
+    song = Song.sorted[input - 1] if input.between?(1,Song.count)
     puts "Playing #{song.name} by #{song.artist.name}" if song != nil
   end
 
