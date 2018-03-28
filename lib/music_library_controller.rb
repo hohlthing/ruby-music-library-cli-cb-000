@@ -17,7 +17,7 @@ class MusicLibraryController
     puts "What would you like to do?"
     input = nil
     while input != 'exit'
-      input = gets.strip
+      input = gets
       case input
       when 'list songs'
         list_songs
